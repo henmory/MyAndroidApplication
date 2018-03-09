@@ -1,0 +1,7 @@
+1.抽象工厂(AbstractFactory)生产的是一系列的产品(AbstractProductA AbstractProductB AbstractProductC)
+
+2.具体的工厂(ConcreteFactoryB, ConcreteFactoryA)实现抽象工厂方法，即创建具体的产品
+
+3.不同的产品有抽象的产品(AbstractProductA, AbstractProductB, AbstractProductC)
+
+4.具体的产品实现抽象接口，(ConcreteGoodProduceA, ConcreteGoodProduceB, ConcreteGoodProduceC, ConcreteBadProduceA, ConcreteBadProduceB, ConcreteBadProduceC)
