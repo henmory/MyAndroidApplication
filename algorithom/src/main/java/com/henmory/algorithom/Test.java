@@ -3,10 +3,7 @@ package com.henmory.algorithom;
 
 import com.henmory.algorithom.sort.BubbleSort;
 import com.henmory.algorithom.sort.InsertSort;
-import com.henmory.algorithom.sort.MergeSort;
 import com.henmory.algorithom.sort.SelectSort;
-
-import java.util.Arrays;
 
 /**
  * author: henmory
