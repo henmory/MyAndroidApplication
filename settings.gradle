@@ -1,1 +1,1 @@
-include ':app', ':aidlclient', ':aidlserver',  'fragementdemo','mvptest','sqlitedemo','toolbartest','AIDLInOnePackage'
+include ':app', ':aidlclient', ':aidlserver', ':algorithom',  'fragementdemo','mvptest','sqlitedemo','toolbartest','AIDLInOnePackage'
