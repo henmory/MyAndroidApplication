@@ -28,8 +28,18 @@ public class Test {
         testSelectSort(a);
         testInsertSort(a);
         testShellSort(a);
+
     }
 
+    /**
+     *  @author henmory
+     *  @date 3/9/18
+     *  @description掩饰撤销
+     *
+     *  @param
+     *
+     *  @return
+    */
     private static void testShellSort(int[] a) {
         InsertSort insertSort = new InsertSort();
         insertSort.shellSort(a);
