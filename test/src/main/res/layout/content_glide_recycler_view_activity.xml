@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".glidetest.view.activity.GlideRecyclerViewACtivity"
+    tools:showIn="@layout/activity_glide_recycler_view_activity">
+
+    <!--<TableLayout-->
+        <!--android:id="@+id/tablelayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:stretchColumns="0,1,2"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TableRow android:layout_marginTop="3dp">-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_zhihu"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_top"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_wechat"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"/>-->
+        <!--</TableRow>-->
+    <!--</TableLayout>-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/rc"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scrollbars="vertical">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnv"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemTextColor="@drawable/bottom_navigation_item_selector"
+        app:itemIconTint="@drawable/bottom_navigation_item_selector"
+        android:background="@android:color/darker_gray"
+        app:menu="@menu/bottom_menu"/>
+</RelativeLayout>

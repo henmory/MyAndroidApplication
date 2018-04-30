@@ -1,1 +1,1 @@
-include ':app', ':aidlclient', ':aidlserver', ':algorithom', ':designpattern',  'fragementdemo','mvptest','sqlitedemo','toolbartest','AIDLInOnePackage'
+include ':app', ':aidlclient', ':aidlserver', ':algorithom', ':designpattern', ':recyclerviewdemo', ':test', ':rxjava_retrofit', ':rxjavademo', ':rxjava1_demo', ':rxjava2_demo', ':junit5',  'fragementdemo','mvptest','sqlitedemo','toolbartest','AIDLInOnePackage'

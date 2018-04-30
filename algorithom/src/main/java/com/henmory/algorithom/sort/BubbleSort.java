@@ -2,6 +2,7 @@ package com.henmory.algorithom.sort;
 
 import java.util.Arrays;
 
+
 /**
  * author: henmory
  * time:  3/9/18
@@ -111,7 +112,52 @@ public class BubbleSort {
         System.out.println("真正的冒泡排序而且进行了优化，进行了 " + compareCount +" 次比较 " + swapCount + " 次交换" );
     }
 
+    //核心是把pivot与找到的值一直交换,最后返回它的下标
+    private int partition(int[] a, int low, int high){
+
+        int pivot = a[0];
+        while (low < high){
+            //从末尾找到小于pivot的值
+            while (low < high && a[high] >= pivot){
+                high--;
+            }
+            //交换high与low的值
+            swap(a, low, high);
+            //从头找到大于pivot的值
+            while (low < high && a[low] < pivot){
+                low++;
+            }
+            swap(a, low, high);
+        }
+        return low;
+    }
+
+    private void qSort(int[] a, int low, int high){
+
+        int pivot = 0;
+
+        if (low < high){
+
+            pivot = partition(a, low, high);
+
+            qSort(a, low, pivot - 1);
+            qSort(a, pivot + 1, high);
+
+        }
+    }
+
+    public void quickSort(int[] a){
+
+        qSort(a, 0, a.length - 1);
+
+    }
 
 
+    private void swap(int[] a, int i, int j) {
+        int temp = 0;
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
 
 }

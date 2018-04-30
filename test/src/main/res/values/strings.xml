@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="title_activity_glide2">Glide2Activity</string>
+    <string name="title_activity_data_binding">DataBindingActivity</string>
+    <string name="title_activity_rx_java">RxJavaActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_main4">Main4Activity</string>
+    <string name="title_activity_main5">Main5Activity</string>
+    <string name="title_activity_glide">GlideActivity</string>
+    <string name="title_activity_glide_base_activity">GlideBaseACtivity</string>
+    <string name="title_activity_glide_recycler_view_activity">GlideRecyclerViewACtivity</string>
+    <string name="title_activity_glide_transformation_activity">GlideTransformationACtivity</string>
+    <string name="title_activity_main6">Main6Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tablayout">TablayoutActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

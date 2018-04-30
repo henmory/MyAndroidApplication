@@ -1,9 +1,10 @@
 package com.henmory.designpattern.design_pattern.Gbridge;
 
-import com.changhong.design_pattern.Gbridge.brand.Dell;
-import com.changhong.design_pattern.Gbridge.brand.Lenovo;
-import com.changhong.design_pattern.Gbridge.size.NineInchMonitor;
-import com.changhong.design_pattern.Gbridge.size.SixteenMonitor;
+
+import com.henmory.designpattern.design_pattern.Gbridge.brand.Dell;
+import com.henmory.designpattern.design_pattern.Gbridge.brand.Lenovo;
+import com.henmory.designpattern.design_pattern.Gbridge.size.NineInchMonitor;
+import com.henmory.designpattern.design_pattern.Gbridge.size.SixteenMonitor;
 
 /**
  * author: henmory

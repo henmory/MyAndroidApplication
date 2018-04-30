@@ -1,6 +1,7 @@
 package com.henmory.designpattern.design_pattern.Gbridge.size;
 
-import com.changhong.design_pattern.Gbridge.brand.Brand;
+
+import com.henmory.designpattern.design_pattern.Gbridge.brand.Brand;
 
 /**
  * author: henmory

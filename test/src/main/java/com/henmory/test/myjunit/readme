@@ -1,0 +1,21 @@
+1.注解类型自定义关键字是@interface
+
+2.注解类型中只能有变量
+
+3.变量定义格式为 String value() default ""
+
+    string 为类型  value()为变量名 default ""赋默认值
+
+4.使用的时候需要@Anno(value = "henmory")
+
+5.元注解可以修饰注解
+
+6.Retention 表示注解存在的时候，这里都是运行时@Retention(RUNTIME)
+
+7.Target 表示注解可以存在的位置 @Target(METHOD) 只能出现在方法上
+
+8.@GET("/image/{id}") 出现在参数中
+   example(@Path("id") int id);
+
+
+9.注解都是结合反射来使用的

@@ -1,10 +1,17 @@
 package com.henmory.mvptest.presenter;
 
 import android.content.Context;
+import android.util.Log;
+
 import com.henmory.mvptest.bean.*;
 import com.henmory.mvptest.module.*;
 import com.henmory.mvptest.view.*;
 import java.lang.ref.WeakReference;
+
+import rx.Scheduler;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * author: henmory
@@ -15,6 +22,7 @@ import java.lang.ref.WeakReference;
 
 public class AccountPresenter<T> {
 
+    private final static String TAG = AccountPresenter.class.getSimpleName();
     private Account account = new Account();
     private WeakReference<T> weakReference; //弱引用
     private AccountModuleImpl accountModule;
@@ -32,17 +40,36 @@ public class AccountPresenter<T> {
 
         account.setPhone(phone);
         account.setPassword(password);
-        //调用module的逻辑
-        accountModule.login(context, account, new IAccountmodule.IAccountmoduleListener() {
+        //调用module的逻辑---之前的逻辑
+//        accountModule.login(context, account, new IAccountmodule.IAccountmoduleListener() {
+//            @Override
+//            public void onSuccess() {
+//                ((ILoginView)weakReference.get()).shutProgress();// 调用view的逻辑
+//            }
+//
+//            @Override
+//            public void onFail() {
+//                ((ILoginView)weakReference.get()).shutProgress();// 调用view的逻辑
+//                ((ILoginView)weakReference.get()).backLoginview();
+//            }
+//        });
+
+        // 采用rxjava的逻辑
+
+        accountModule.login(context, "sf", null).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<String>() {
             @Override
-            public void onSuccess() {
+            public void onCompleted() {//处理对话框操作
                 ((ILoginView)weakReference.get()).shutProgress();// 调用view的逻辑
             }
 
             @Override
-            public void onFail() {
-                ((ILoginView)weakReference.get()).shutProgress();// 调用view的逻辑
-                ((ILoginView)weakReference.get()).backLoginview();
+            public void onError(Throwable e) {
+                Log.d(TAG, "onError: ");
+            }
+
+            @Override
+            public void onNext(String s) {//成功去解析数据
+
             }
         });
     }

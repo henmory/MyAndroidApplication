@@ -1,5 +1,6 @@
 package com.changhong.myapplication;
 
+import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -20,26 +21,40 @@ public class MainActivity extends AppCompatActivity {
 
     IMyInterface aidl;
     Button btn;
+    Button btn_create;
     TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btn_create = findViewById(R.id.btn_test);
         btn = findViewById(R.id.btn_test);
         textView = findViewById(R.id.tv);
+        btn_create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startService(new Intent("com.changhong.application1.MyService"));
+            }
+        });
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                int result = 0;
+//                try {
+//                    result = aidl.add(1, 2);
+//                    Log.d("afd","result = " + result);
+//                } catch (RemoteException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//        bindService();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int result = 0;
-                try {
-                    result = aidl.add(1, 2);
-                    Log.d("afd","result = " + result);
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
+                bindService();
             }
         });
-        bindService();
     }
 
     private void bindService() {
@@ -52,7 +67,17 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             Log.d("MainActivity", "onServiceConnected: " + service);
+
             aidl = IMyInterface.Stub.asInterface(service);
+
+//            int pid = android.os.Process.myPid();
+//            ActivityManager mActivityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+//            for (ActivityManager.RunningAppProcessInfo appProcess : mActivityManager
+//                    .getRunningAppProcesses()) {
+//                if (appProcess.pid == pid) {
+//                    Log.d("MainActivity",appProcess.processName);
+//                }
+//            }
         }
 
         @Override

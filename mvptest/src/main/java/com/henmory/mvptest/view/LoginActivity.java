@@ -1,5 +1,6 @@
 package com.henmory.mvptest.view;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button btnReigster;
     private TextView tvForgetPassword;
     private AccountPresenter accountPresenter;
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnLogin.setOnClickListener(this);
         btnReigster.setOnClickListener(this);
         tvForgetPassword.setOnClickListener(this);
+        progressDialog = new ProgressDialog(this);
     }
 
 
@@ -112,7 +117,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void showProgress() {
-
+        progressDialog.setTitle("login......");
     }
 
     @Override

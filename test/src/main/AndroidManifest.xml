@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.henmory.test">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- <meta-data -->
+    <!-- android:name="com.henmory.test.glidetest.GlideModelConfig" -->
+    <!-- android:value="GlideModule" /> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".databinding.DataBindingActivity"
+            android:label="@string/title_activity_data_binding"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mvvmtest.MainActivity"
+            android:label="@string/title_activity_data_binding"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".java_rx.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".retrofit.Main4Activity"
+            android:label="@string/title_activity_main4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rxjava2.RxJava2Activity"
+            android:label="@string/title_activity_main5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".glidetest.view.activity.GlideActivity"
+            android:label="@string/title_activity_glide"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".glidetest.view.activity.GlideBaseACtivity"
+            android:label="@string/title_activity_glide_base_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".glidetest.view.activity.GlideRecyclerViewACtivity"
+            android:label="@string/title_activity_glide_recycler_view_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tablayout_viewpager_fragment.activity.TablayoutActivity"
+            android:label="@string/title_activity_tablayout"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!-- 变量user， 描述了一个布局中会用到的属性 -->
+        <variable name="user" type="com.henmory.test.databinding.User"/>
+        <variable
+            name="handler"
+            type="com.henmory.test.databinding.HandlerEvent"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName}"/>
+
+        <!-- 布局文件中的表达式使用 “@{}” 的语法 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.lastName}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test_click"
+            android:onClick="@{handler::onClickFriend}"/>
+    </LinearLayout>
+
+</layout>

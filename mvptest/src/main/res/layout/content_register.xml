@@ -16,7 +16,7 @@
     <EditText
         android:id="@+id/et_phone_number"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:drawablePadding="8dp"
         android:paddingLeft="9dp"
         android:gravity="center_vertical"
@@ -52,13 +52,14 @@
             android:layout_height="30dp"
             android:text="获取验证码"
             android:textColor="#ffffff"
+            android:layout_centerVertical="true"
             android:background="@drawable/get_code_background"/>
     </RelativeLayout>
     <EditText
         android:id="@+id/et_password"
         android:layout_below="@id/rl_sms_code"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:drawablePadding="8dp"
         android:paddingLeft="9dp"
@@ -71,7 +72,7 @@
         android:id="@+id/et_confirm_password"
         android:layout_below="@id/et_password"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:drawablePadding="8dp"
         android:paddingLeft="9dp"
