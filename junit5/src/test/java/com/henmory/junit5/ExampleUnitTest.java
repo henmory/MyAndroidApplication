@@ -1,5 +1,6 @@
 package com.henmory.junit5;
 
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,8 +9,15 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+
 @DisplayName("测试的一个类: ExampleUnitTest")
 public class ExampleUnitTest {
+
 
     @Test
     @BeforeAll
@@ -36,7 +44,7 @@ public class ExampleUnitTest {
     @DisplayName("method : failTest")
     void failTest(){
         System.out.println("failTest");
-
+        assertThat(2+1, is(equalTo(5)));
     }
 
 
