@@ -16,6 +16,21 @@ android {
 
     }
 
+
+    testOptions {
+        // Configuration closure added by the plugin;
+        // all configurable parameters related to JUnit 5 can be found here
+        junitPlatform {
+            // The JUnit Jupiter dependency version to use
+            jupiterVersion "5.2.0"
+
+            // The JUnit Vintage Engine dependency version to use
+            vintageVersion "5.2.0"
+
+
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
